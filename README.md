@@ -1,29 +1,29 @@
 # Invoices Service
 
-Microservicio para gestión de facturas electrónicas desarrollado con .NET 9.
+Microservicio para gestiï¿½n de facturas electrï¿½nicas desarrollado con .NET 9.
 
-## ¿Qué hace este proyecto?
+## ï¿½Quï¿½ hace este proyecto?
 
 Este servicio permite:
 - Crear, consultar, actualizar y eliminar facturas
 - Validar clientes contra el servicio de Customers
-- Almacenar eventos de facturas usando el patrón Outbox
-- Soportar PostgreSQL (desarrollo) y Oracle (producción)
+- Almacenar eventos de facturas usando el patrï¿½n Outbox
+- Soportar PostgreSQL (desarrollo) y Oracle (producciï¿½n)
 
-## Tecnologías
+## Tecnologï¿½as
 
 - **.NET 9** - Framework principal
 - **PostgreSQL/Oracle** - Base de datos
 - **Entity Framework Core** - ORM
-- **Docker** - Contenedorización
-- **Swagger** - Documentación de API
+- **Docker** - Contenedorizaciï¿½n
+- **Swagger** - Documentaciï¿½n de API
 
 ## Ejecutar con Docker Compose
 
 ### Requisitos previos
 
 - Docker Desktop instalado
-- Puerto 3002 disponible (API)
+- Puerto 3001 disponible (API)
 - Puerto 5432 disponible (PostgreSQL)
 
 ### Pasos para ejecutar
@@ -59,14 +59,14 @@ Este servicio permite:
 
 5. **Verificar que funciona**
 
-   Abre en tu navegador: http://localhost:3002/swagger
+   Abre en tu navegador: http://localhost:3001/swagger
 
    O prueba el endpoint de salud:
    ```bash
-   curl http://localhost:3002/api/v1/health
+   curl http://localhost:3001/api/v1/health
    ```
 
-### Comandos útiles
+### Comandos ï¿½tiles
 
 **Ver logs del servicio:**
 ```bash
@@ -90,7 +90,7 @@ docker-compose --env-file .env.docker build --no-cache invoices-service
 
 ## Endpoints principales
 
-Una vez que el servicio esté corriendo en http://localhost:3002:
+Una vez que el servicio estï¿½ corriendo en http://localhost:3001:
 
 - `GET /api/v1/health` - Verificar estado del servicio
 - `POST /api/v1/invoices` - Crear una factura
@@ -98,14 +98,14 @@ Una vez que el servicio esté corriendo en http://localhost:3002:
 - `GET /api/v1/invoices/{id}` - Obtener factura por ID
 - `PUT /api/v1/invoices/{id}` - Actualizar factura
 - `DELETE /api/v1/invoices/{id}` - Eliminar factura
-- `GET /swagger` - Documentación interactiva de la API
+- `GET /swagger` - Documentaciï¿½n interactiva de la API
 
 ## Ejemplo de uso
 
 ### Crear una factura
 
 ```bash
-curl -X POST http://localhost:3002/api/v1/invoices \
+curl -X POST http://localhost:3001/api/v1/invoices \
   -H "Content-Type: application/json" \
   -d '{
     "customerId": "5",
@@ -127,7 +127,7 @@ curl -X POST http://localhost:3002/api/v1/invoices \
 ### Listar facturas
 
 ```bash
-curl http://localhost:3002/api/v1/invoices?page=1&pageSize=10
+curl http://localhost:3001/api/v1/invoices?page=1&pageSize=10
 ```
 
 ## Desarrollo sin Docker
@@ -142,20 +142,20 @@ dotnet restore
 dotnet run --project src/InvoicesService.API/InvoicesService.API.csproj
 ```
 
-**Nota:** Necesitarás PostgreSQL o Oracle ejecutándose localmente y configurar la cadena de conexión en `appsettings.Development.json`.
+**Nota:** Necesitarï¿½s PostgreSQL o Oracle ejecutï¿½ndose localmente y configurar la cadena de conexiï¿½n en `appsettings.Development.json`.
 
 ## Arquitectura
 
 El proyecto sigue **Clean Architecture** con estas capas:
 
 ```
-Domain         ’ Entidades de negocio (Invoice, InvoiceItem)
-Application    ’ Casos de uso y lógica de aplicación
-Infrastructure ’ Acceso a datos y servicios externos
-API            ’ Controladores y endpoints REST
+Domain         ï¿½ Entidades de negocio (Invoice, InvoiceItem)
+Application    ï¿½ Casos de uso y lï¿½gica de aplicaciï¿½n
+Infrastructure ï¿½ Acceso a datos y servicios externos
+API            ï¿½ Controladores y endpoints REST
 ```
 
-## Más información
+## Mï¿½s informaciï¿½n
 
 Para detalles sobre desarrollo, migraciones de base de datos y arquitectura completa, consulta el archivo [CLAUDE.md](./CLAUDE.md).
 

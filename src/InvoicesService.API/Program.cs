@@ -51,7 +51,7 @@ builder.Services.AddCors(options =>
 // Configure Kestrel
 builder.WebHost.ConfigureKestrel(options =>
 {
-    options.ListenAnyIP(3002);
+    options.ListenAnyIP(3001);
 });
 
 var app = builder.Build();
@@ -75,7 +75,7 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Logger.LogInformation("Invoices Service is starting...");
-app.Logger.LogInformation("Listening on port 3002");
+app.Logger.LogInformation("Listening on port 3001");
 
 app.Run();
 

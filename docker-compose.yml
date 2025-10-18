@@ -51,13 +51,13 @@ services:
     container_name: invoices-service
     environment:
       ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
-      ASPNETCORE_URLS: http://+:3002
+      ASPNETCORE_URLS: http://+:3001
       DatabaseSettings__UseOracle: ${USE_ORACLE:-false}
       DatabaseSettings__PostgresConnection: ${POSTGRES_CONNECTION}
       DatabaseSettings__OracleConnection: ${ORACLE_CONNECTION}
       ExternalServices__CustomersApiUrl: ${CUSTOMERS_API_URL:-http://host.docker.internal:3001}
     ports:
-      - "${INVOICES_PORT:-3002}:3002"
+      - "${INVOICES_PORT:-3001}:3001"
     depends_on:
       postgres:
         condition: service_healthy
