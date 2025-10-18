@@ -1,5 +1,6 @@
 using InvoicesService.Application.Interfaces;
 using InvoicesService.Domain.Interfaces;
+using InvoicesService.Infrastructure.BackgroundServices;
 using InvoicesService.Infrastructure.ExternalServices;
 using InvoicesService.Infrastructure.Persistence;
 using InvoicesService.Infrastructure.Persistence.Repositories;
@@ -51,6 +52,9 @@ public static class DependencyInjection
         })
         .AddPolicyHandler(GetRetryPolicy(customersApiRetryCount))
         .AddPolicyHandler(GetCircuitBreakerPolicy());
+
+        // Background Services
+        services.AddHostedService<OutboxPublisherService>();
 
         return services;
     }
