@@ -1,6 +1,6 @@
 # Invoices Service
 
-Microservicio para gestion de facturas electr�nicas desarrollado con .NET 9.
+Microservicio para gestion de facturas electronicas desarrollado con .NET 9.
 
 ## Que hace este proyecto?
 
@@ -15,8 +15,8 @@ Este servicio permite:
 - **.NET 9** - Framework principal
 - **PostgreSQL/Oracle** - Base de datos
 - **Entity Framework Core** - ORM
-- **Docker** - Contenedorizaci�n
-- **Swagger** - Documentaci�n de API
+- **Docker** - Contenedorizacion
+- **Swagger** - Documentacion de API
 
 ## Ejecutar con Docker Compose
 
@@ -66,7 +66,7 @@ Este servicio permite:
    curl http://localhost:3001/api/v1/health
    ```
 
-### Comandos �tiles
+### Comandos utiles
 
 **Ver logs del servicio:**
 ```bash
@@ -90,7 +90,7 @@ docker-compose --env-file .env.docker build --no-cache invoices-service
 
 ## Endpoints principales
 
-Una vez que el servicio est� corriendo en http://localhost:3001:
+Una vez que el servicio este corriendo en http://localhost:3001:
 
 - `GET /api/v1/health` - Verificar estado del servicio
 - `POST /api/v1/invoices` - Crear una factura
@@ -98,7 +98,7 @@ Una vez que el servicio est� corriendo en http://localhost:3001:
 - `GET /api/v1/invoices/{id}` - Obtener factura por ID
 - `PUT /api/v1/invoices/{id}` - Actualizar factura
 - `DELETE /api/v1/invoices/{id}` - Eliminar factura
-- `GET /swagger` - Documentaci�n interactiva de la API
+- `GET /swagger` - Documentacion interactiva de la API
 
 ## Ejemplo de uso
 
@@ -142,7 +142,7 @@ dotnet restore
 dotnet run --project src/InvoicesService.API/InvoicesService.API.csproj
 ```
 
-**Nota:** Necesitar�s PostgreSQL o Oracle ejecut�ndose localmente y configurar la cadena de conexion en `appsettings.Development.json`.
+**Nota:** Necesitaras PostgreSQL o Oracle ejecutandose localmente y configurar la cadena de conexion en `appsettings.Development.json`.
 
 ## Arquitectura
 
