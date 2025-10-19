@@ -59,7 +59,6 @@ _ReSharper*/
 .env.local
 .env.development
 .env.production
-.env.docker
 
 *.db
 *.sqlite

@@ -52,10 +52,10 @@ services:
     environment:
       ASPNETCORE_ENVIRONMENT: ${ASPNETCORE_ENVIRONMENT:-Development}
       ASPNETCORE_URLS: http://+:3001
-      DatabaseSettings__UseOracle: ${USE_ORACLE:-false}
-      DatabaseSettings__PostgresConnection: ${POSTGRES_CONNECTION}
-      DatabaseSettings__OracleConnection: ${ORACLE_CONNECTION}
-      ExternalServices__CustomersApiUrl: ${CUSTOMERS_API_URL:-http://host.docker.internal:3001}
+      UseOracle: ${USE_ORACLE:-false}
+      ConnectionStrings__PostgreSqlConnection: ${POSTGRES_CONNECTION}
+      ConnectionStrings__OracleConnection: ${ORACLE_CONNECTION}
+      ExternalServices__CustomersApi__BaseUrl: ${CUSTOMERS_API_URL:-http://host.docker.internal:3001}
     ports:
       - "${INVOICES_PORT:-3001}:3001"
     depends_on:
@@ -67,6 +67,7 @@ services:
         required: false
     networks:
       - invoices-network
+      - customers_network
     profiles: ["invoices"]
 
   pgadmin:
@@ -97,3 +98,6 @@ volumes:
 networks:
   invoices-network:
     driver: bridge
+  customers_network:
+    external: true
+    name: customers-service_customers_network

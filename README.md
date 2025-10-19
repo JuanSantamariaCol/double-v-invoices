@@ -24,7 +24,7 @@ Este servicio permite:
 
 - Docker Desktop instalado
 - Puerto 3001 disponible (API)
-- Puerto 5432 disponible (PostgreSQL)
+- Puerto 5433 disponible (PostgreSQL)
 
 ### Pasos para ejecutar
 
