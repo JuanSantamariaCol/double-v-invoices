@@ -154,11 +154,3 @@ Application    * Casos de uso y logica de aplicacion
 Infrastructure * Acceso a datos y servicios externos
 API            * Controladores y endpoints REST
 ```
-
-## Mas informacion
-
-Para detalles sobre desarrollo, migraciones de base de datos y arquitectura completa, consulta el archivo [CLAUDE.md](./CLAUDE.md).
-
----
-
-**Desarrollado para FactuMarket S.A.**
