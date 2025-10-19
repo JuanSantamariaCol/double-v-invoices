@@ -149,10 +149,10 @@ dotnet run --project src/InvoicesService.API/InvoicesService.API.csproj
 El proyecto sigue **Clean Architecture** con estas capas:
 
 ```
-Domain         � Entidades de negocio (Invoice, InvoiceItem)
-Application    � Casos de uso y l�gica de aplicaci�n
-Infrastructure � Acceso a datos y servicios externos
-API            � Controladores y endpoints REST
+Domain         * Entidades de negocio (Invoice, InvoiceItem)
+Application    * Casos de uso y logica de aplicacion
+Infrastructure * Acceso a datos y servicios externos
+API            * Controladores y endpoints REST
 ```
 
 ## Mas informacion
