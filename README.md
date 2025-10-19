@@ -7,8 +7,8 @@ Microservicio para gestion de facturas electr�nicas desarrollado con .NET 9.
 Este servicio permite:
 - Crear, consultar, actualizar y eliminar facturas
 - Validar clientes contra el servicio de Customers
-- Almacenar eventos de facturas usando el patr�n Outbox
-- Soportar PostgreSQL (desarrollo) y Oracle (producci�n)
+- Almacenar eventos de facturas usando el patron Outbox
+- Soportar PostgreSQL (desarrollo) y Oracle (produccion)
 
 ## Tecnologias
 
