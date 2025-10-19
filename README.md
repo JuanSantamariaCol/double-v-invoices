@@ -1,8 +1,8 @@
 # Invoices Service
 
-Microservicio para gesti�n de facturas electr�nicas desarrollado con .NET 9.
+Microservicio para gestion de facturas electr�nicas desarrollado con .NET 9.
 
-## �Qu� hace este proyecto?
+## Que hace este proyecto?
 
 Este servicio permite:
 - Crear, consultar, actualizar y eliminar facturas
@@ -10,7 +10,7 @@ Este servicio permite:
 - Almacenar eventos de facturas usando el patr�n Outbox
 - Soportar PostgreSQL (desarrollo) y Oracle (producci�n)
 
-## Tecnolog�as
+## Tecnologias
 
 - **.NET 9** - Framework principal
 - **PostgreSQL/Oracle** - Base de datos
@@ -142,7 +142,7 @@ dotnet restore
 dotnet run --project src/InvoicesService.API/InvoicesService.API.csproj
 ```
 
-**Nota:** Necesitar�s PostgreSQL o Oracle ejecut�ndose localmente y configurar la cadena de conexi�n en `appsettings.Development.json`.
+**Nota:** Necesitar�s PostgreSQL o Oracle ejecut�ndose localmente y configurar la cadena de conexion en `appsettings.Development.json`.
 
 ## Arquitectura
 
@@ -155,7 +155,7 @@ Infrastructure � Acceso a datos y servicios externos
 API            � Controladores y endpoints REST
 ```
 
-## M�s informaci�n
+## Mas informacion
 
 Para detalles sobre desarrollo, migraciones de base de datos y arquitectura completa, consulta el archivo [CLAUDE.md](./CLAUDE.md).
 
